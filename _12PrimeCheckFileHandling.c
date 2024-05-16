@@ -21,7 +21,7 @@ int main()
   FILE *f, *fp, *fnp;
   int i, num, res, pc=0, npc=0;
   char ch, S[50];
-  f = fopen("C:/Users/prakr/Documents/TermWork/SEM2/Num.txt","w");
+  f = fopen("Num.txt","w");
   if(f==NULL) printf("\nFile Num.txt not created.\n");
   else
   {  
@@ -33,9 +33,9 @@ int main()
       putw(num,f);
      }
     fclose(f);
-    f = fopen("C:/Users/prakr/Documents/TermWork/SEM2/Num.txt","r");
-    fp = fopen("C:/Users/prakr/Documents/TermWork/SEM2/Prime.txt","w");
-    fnp = fopen("C:/Users/prakr/Documents/TermWork/SEM2/NonPrime.txt","w");
+    f = fopen("Num.txt","r");
+    fp = fopen("Prime.txt","w");
+    fnp = fopen("NonPrime.txt","w");
     for(i=1; i<=20; i++)
      {
       num = getw(f);
@@ -54,8 +54,8 @@ int main()
     fclose(f);
     fclose(fp);
     fclose(fnp);
-    fp = fopen("C:/Users/prakr/Documents/TermWork/SEM2/Prime.txt","r");
-    fnp = fopen("C:/Users/prakr/Documents/TermWork/SEM2/NonPrime.txt","r");
+    fp = fopen("Prime.txt","r");
+    fnp = fopen("NonPrime.txt","r");
     printf("\n\n\n**********OUTPUT**********");
     printf("\nThe numbers in Prime.txt are:\n");
     i=0;
