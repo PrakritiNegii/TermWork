@@ -12,7 +12,7 @@ int main()
  {
   FILE *fp, *fp2;
   char S[50];
-  fp = fopen("C:/Users/prakr/Documents/TermWork/SEM2/Data.txt","r");
+  fp = fopen("Data.txt","r");
   printf("\n**********INPUT**********"); 
   printf("\nThe data present in Data.txt is:\n\n");
   while(fgets(S,50,fp))
@@ -20,7 +20,7 @@ int main()
     printf("%s",S);
    }
   fseek(fp,0,0);
-  fp2 = fopen("C:/Users/prakr/Documents/TermWork/SEM2/Del.txt","w");
+  fp2 = fopen("Del.txt","w");
   if(fp2==NULL) printf("\nFile Del.txt not created.\n");
   else
   {  
@@ -38,7 +38,7 @@ int main()
      }
     fclose(fp);
     fclose(fp2);
-    fp2 = fopen("C:/Users/prakr/Documents/TermWork/SEM2/Del.txt","r");
+    fp2 = fopen("Del.txt","r");
     printf("\n\n\n**********OUTPUT**********");
     printf("\nThe data present in Del.txt is:\n\n");
     while(fgets(S,50,fp2))
