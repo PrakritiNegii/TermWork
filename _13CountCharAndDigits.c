@@ -18,7 +18,7 @@ int main()
   FILE *f, *fc;
   int charC=0, numC=0;
   char ch, ch2, S[50];
-  f = fopen("C:/Users/prakr/Documents/TermWork/SEM2/File.txt","w");  
+  f = fopen("File.txt","w");  
   printf("\n**********INPUT**********"); 
   printf("\nInput paragraph in File.txt:\n\n");
   while((ch=getchar())!=EOF)
@@ -26,8 +26,8 @@ int main()
     fputc(ch,f);
    }
   fclose(f);
-  f = fopen("C:/Users/prakr/Documents/TermWork/SEM2/File.txt","r");
-  fc = fopen("C:/Users/prakr/Documents/TermWork/SEM2/Count.txt","w");
+  f = fopen("File.txt","r");
+  fc = fopen("Count.txt","w");
   while((ch=fgetc(f))!=EOF)
    {
     ch2 = fgetc(f);
@@ -50,7 +50,7 @@ int main()
    }
   fclose(fc);
   rewind(f);
-  fc = fopen("C:/Users/prakr/Documents/TermWork/SEM2/Count.txt","r");
+  fc = fopen("Count.txt","r");
   printf("\n\n\n**********OUTPUT**********");
   printf("\nThe contents of File.txt are:\n\n");
   while(fgets(S,50,f))
